@@ -1,0 +1,82 @@
+<% include ./partials/adminheader %>
+
+
+
+
+  
+  
+ </div>
+<p style="font-size:30px;
+                text-align:center;"><span style="font-family: 'Nunito', sans-serif;"><span style="background-color:lightblue;
+                                                                                                  color:black;">FE-CE</span></p>
+  
+
+
+
+<div style="overflow-x:auto;">
+ <table class="table table-bordered" id="table">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>PID</th>
+        <th>Roll Number</th>
+        <th>Mobile no</th>
+        <th>Profile</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%members.forEach(function(member){%>
+      <tr>
+        <td><%=member.StudentName%></td>
+        <td><%=member.username%></td>
+        <td><%=member.RollNumber%></td>
+        <td><%=member.MobileNumber%></td>
+        <td><a href="/profile/<%=member._id%>"><button style="margin-top:10px">Profile</button></a></td>
+        <td><form action="/deleteMember/<%=member._id%>" method="POST">
+           <button style="margin-top:10px;background-color:red;color:white">remove</button>
+          </form>
+        </td>
+        <%})%>
+      </tr>   
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+

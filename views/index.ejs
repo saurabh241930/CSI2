@@ -1,0 +1,280 @@
+<% include ./partials/header %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    
+    
+   
+
+      
+      
+      
+     <div class="col col-lg-12 col-md-12 col-xs-12" >
+       
+
+ <div style="background-image:url(https://i.imgur.com/UszrUHB.jpg);
+             background-size:     cover;                   
+             background-repeat:   no-repeat;
+              background-attachment: fixed;
+            background-position: center center;
+             height:534px;
+             width:100%">
+   
+  
+   <div class="col col-lg-12 col-md-12 col-xs-12" style="
+                                                        background: linear-gradient(rgba(0,0,0,0.3),black);
+                                                        height:534px;">
+     
+  <div class="col col-lg-8 col-md-0 col-xs-0"></div>
+     
+     <div class="col col-lg-4 col-md-12 col-xs-12">
+       
+        <%if(currentUser){%>
+       <div style="background-color:rgba(0,0,0,0.4);padding:30px;text-align:center;margin-top:50px">
+          <i style="font-size:70px;color:#5289DF;margin-top:40px;" class="fa fa-user"></i>
+          <p style="font-family: 'Nunito', sans-serif;margin-top:10px; font-size:30px; color:white"><strong><%=currentUser.StudentName%></strong></p><br>
+          <p style="font-family: 'Nunito', sans-serif;margin-top:50px; font-size:18px;color:rgba(0,0,0,0.5);margin-top:-20px">
+           <span style="color:white;padding:2px">PID :</span>
+           <strong style="color:white"><%=currentUser.username%></strong></p><br>
+           <a style="font-family: 'Nunito', sans-serif;
+                    font-size:15px;
+                    color:white;
+                    background-color:rgb(0, 51, 153);
+                    padding:4px;
+                    border-radius:5px" href="/profile/<%=currentUser._id%>">Profile</a><br><br>
+          <a style="font-family: 'Nunito', sans-serif;
+                    font-size:20px;
+                    color:white;
+                    background-color:black;
+                    padding:8px;
+                    border-radius:5px" href="/logout">Logout</a>
+       </div>
+       
+        
+       
+       
+       <%}else{%>
+       
+       <div style="background-color:rgba(0,0,0,0.4);padding:30px;text-align:center;margin-top:50px">
+         
+         <form class = "ui form" action = '/login' method = "post">
+          
+           <p style="color:white;font-family: 'Montserrat', sans-serif;">Login to view your profile</p>
+           
+           <label  style="margin-top:5px; font-size:15px;color:white;font-family: 'Montserrat', sans-serif;" for="username">PID</label><br>
+           
+           <input id='username' style="font-family: 'Nunito', sans-serif;
+                         text-align:center;
+                         font-size:20px;
+                         background-color:rgba(256,256,256,0.5);
+                         padding:5px;
+                         color:black;
+                                   
+                         border:solid 1px rgba(0,0,0,0.2);
+                         " type = 'text' name = 'username' placeholder = 'PID'><br>
+           
+           <label style="margin-top:30px; font-size:15px;color:white;font-family: 'Montserrat', sans-serif;" for="password">Password</label><br>
+           
+          <input id="password" style="font-family: 'Nunito', sans-serif;
+                         text-align:center;
+                         font-size:20px;
+                         margin-top:0px;        
+                          background-color:rgba(256,256,256,0.5);
+                         padding:5px;
+                         color:black;
+                         border:solid 1px rgba(0,0,0,0.2);
+                         " type = 'password' name = 'password' placeholder = 'Password'><br><br><br>
+           
+           <button style="background-color:#003994;
+                          color:white;
+                          border:solid 1px #003994;
+                          padding:10px 30px 10px 30px;
+                          
+                          ">
+            <strong>Login</strong> 
+           </button>
+           
+         </form>
+         
+       </div>
+       <%}%>
+       
+     </div>
+     
+     
+     
+     
+   </div>
+   
+            </div>
+  
+       </div>
+
+   
+   
+   
+       
+<!--        <div style="" class="col col-lg-4 col-md-6 col-xs-12" >
+       
+       <p style="margin-top:25px;text-align:center">
+         <span style="font-family: 'Nunito', sans-serif;
+                    font-size:20px;
+                    color:white;
+                    background-color:black;
+                    padding:8px;
+                    border-radius:5px">Upcoming Events</span>
+         </p>
+         
+         
+         
+         
+        
+
+        
+<!--          <%events.forEach(function(event){%>
+        
+         
+        
+        
+            <p style="background-color:#ccc;
+                   font-family: 'Nunito', sans-serif;
+                   font-size:20px;
+                   margin-top:15px;
+                   padding:8px"><%=event.EventName%>
+           <span style="font-family: 'Nunito', sans-serif;
+                    font-size:15px;
+                    color:rgba(0, 51, 153,0.7);
+                    
+                    padding:4px;
+                    border-radius:5px"><%=event.EventDateInWords%></span>
+           <a href="/open/<%=event._id%>"
+              style="float:right;
+                             background-color:rgb(0, 51, 153);
+                             color:white;
+                             padding:6px;
+                             font-size:15px;
+                             border-radius:5px
+                             ">Register <i class="fa fa-arrow-circle-right"></i></a>
+         </p>
+         <%})%>
+          -->
+       </div>  
+       
+<!--        <div style="text-align:center;border-left:solid 1px #ccc" class="col col-lg-2">
+         <%if(currentUser){%>
+         <i style="font-size:80px;color:#ccc;margin-top:40px;" class="fa fa-user"></i><br>
+          <p style="font-family: 'Nunito', sans-serif;margin-top:10px; font-size:30px;"><strong><%=currentUser.StudentName%></strong></p><br>
+         
+         <p style="font-family: 'Nunito', sans-serif;margin-top:50px; font-size:18px;color:rgba(0,0,0,0.5);margin-top:-20px">
+           <span style="background-color:rgba(0,0,0,0.5);color:white;padding:2px">PID :</span>
+           <strong><%=currentUser.username%></strong></p><br>
+         
+         <a style="font-family: 'Nunito', sans-serif;
+                    font-size:15px;
+                    color:white;
+                    background-color:rgb(0, 51, 153);
+                    padding:4px;
+                    border-radius:5px" href="/profile/<%=currentUser._id%>">Profile</a><br><br><br>
+          <a style="font-family: 'Nunito', sans-serif;
+                    font-size:20px;
+                    color:white;
+                    background-color:black;
+                    padding:8px;
+                    border-radius:5px" href="/logout">Logout</a>
+         
+         <%}else{%>
+         <p style="margin-top:20px;font-family: 'Nunito', sans-serif;">Login to view your profile</p>
+         <div style="border-radius:8px;
+                     padding-bottom:15px;
+                     padding:15px 15px 15px 15px;
+                     border-top:solid 20px white;
+                     background-color:#ccc">
+                    <form class = "ui form" action = '/login' method = "post">
+    
+    <div style="margin-top:20px; font-size:17px">
+       <label>Enter your PID</label>
+       <input  style="margin-top:0px;
+                text-align:center;
+                 font-family: 'Nunito', sans-serif;" 
+        class="form-control" type = 'text' name = 'username' placeholder = 'PID'>
+    </div>
+
+ 
+    <div style="margin-top:20px; font-size:17px">
+      <label>Enter your Password</label>
+       <input  style="margin-top:20px;
+                text-align:center;
+                font-family: 'Nunito', sans-serif;" 
+        class="form-control" type = 'password' name = 'password' placeholder = 'Password'>
+    </div>
+ 
+ <button style="background-color:rgb(0, 51, 153);
+                  color:white;
+                  width:100%;
+                font-family: 'Nunito', sans-serif;
+                  border:solid 2px rgb(0, 51, 153);
+                  margin-top:20px;
+                  height:40px;
+                  font-size:20px"  >Login</button>
+</form>
+         </div>
+    
+         <%}%>
+       </div>
+       
+        -->
+       
+       
+       
+
+      
+      
+      
+      
+      
+      
+  
+     
+      
+    <style>
+ 
+      </style>  
+      
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <script>
+    
+
+        
+      </script>
+      
+      
+      
+      
+      
+    </div>
+    
+  </div>
+
+
+  
+  
+  <script>
+    
+    if($(window).width() < 767){
+      $('#logoImage').css("width","100%");
+      
+    }
+   
+    
+    
+  </script>

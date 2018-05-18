@@ -1,0 +1,279 @@
+<% include ./partials/adminheader %>
+
+
+<!-- 
+    <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      
+     <div class="col col-lg-6" style="height:30px;text-align:center;background-color:grey;border:solid 2px grey"> 
+       <a href="/AdminPortal" style="color:white;font-family: 'Nunito', sans-serif;font-size:20px;">Class-wise</a>
+      </div>
+      
+        <div class="col col-lg-6" style="height:30px;text-align:center;border:solid 2px grey"> 
+       <a style="color:grey;font-family: 'Nunito', sans-serif;font-size:20px;" href="/eventWise">Event-wise</a>
+      </div>
+      
+      <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:30px; border:solid 1px #ccc;">
+        <a href="/AdminPortal"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                                 
+                                                                                 color:blue"><p style="margin-top:10px;">
+                                                                                <strong>All Student</strong></a> </p></div>
+      <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/feCE"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                                 
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>F.E(Comps)</strong></a> </p></div>
+      <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/feIT"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                               
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>F.E(IT)</strong></a> </p></a> </div>
+ <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/feEXTC"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                               
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>F.E(EXTC)</strong></a> </p></a> </div>
+  <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/seCE"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                                 
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>S.E(Comps)</strong></a> </p></div>
+      <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/seIT"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                               
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>S.E(IT)</strong></a> </p></a> </div>
+ <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/seEXTC"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                               
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>S.E(EXTC)</strong></a> </p></a> </div>
+  <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/teCE"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                                 
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>T.E(Comps)</strong></a> </p></div>
+      <div class="col col-lg-12" style="height:50px;text-align:center;margin-top:0px;border:solid 1px #ccc;"><a href="/teIT"
+                                                                          style="font-family: 'Nunito', sans-serif;
+                                                                                 font-size:20px;
+                                                                               
+                                                                                 color:blue"><p  style="margin-top:10px;">
+                                                                                 <strong>T.E(IT)</strong></a> </p></a> </div>
+
+
+  </div> -->
+
+
+
+<!--   <div class="col col-lg-9 ">
+    
+      <div class="col col-lg-12" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc;background-color:grey">
+  <p style="font-size:17px; text-align:center;margin-top:8px;font-weight:bold ">All Students</p> </div>
+    
+         
+<div class="col col-lg-3" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc;background-color:lightblue">
+  <p style="font-size:17px; text-align:center;margin-top:8px;font-weight:bold ">StudentName</p>
+  </div>
+  <div class="col col-lg-3" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc;background-color:lightblue">
+  <p style="font-size:17px; text-align:center;margin-top:8px;font-weight:bold ">PID</p>
+  </div>
+  <div class="col col-lg-2" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc;background-color:lightblue">
+  <p style="font-size:17px; text-align:center;margin-top:8px;font-weight:bold">Roll Number</p>
+  </div>
+    <div class="col col-lg-2" style="border-bottom:solid 1px #ccc;background-color:lightblue">
+  <p style="font-size:17px; text-align:center;margin-top:8px;font-weight:bold">Mobile Number</p>
+  </div>
+<div class="col col-lg-2" style="text-align:center;">
+  
+  
+
+  </div>
+    
+    
+     -->
+            
+<!--     <%members.forEach(function(member){%>
+<div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc">
+  <p style="font-size:17px; text-align:center;margin-top:8px; "><%=member.StudentName%></p>
+  </div>
+  <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc">
+  <p style="font-size:17px; text-align:center;margin-top:8px; "><%=member.username%></p>
+  </div>
+  <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2" style="border-right:solid 2px #ccc;border-bottom:solid 1px #ccc">
+  <p style="font-size:17px; text-align:center;margin-top:8px;"><%=member.RollNumber%></p>
+  </div>
+    <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2" style="border-bottom:solid 1px #ccc">
+  <p style="font-size:17px; text-align:center;margin-top:8px;"><%=member.MobileNumber%></p>
+  </div>
+<div class="col col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center;">
+  <p>
+      <a href="/profile/<%=member._id%>"><button style="margin-top:10px">Profile</button></a>
+   </div>
+    
+    <div class="col col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center;">
+  <form action="/deleteMember/<%=member._id%>" method="POST">
+   <button style="margin-top:10px;background-color:red;color:white">remove</button>
+  </form>
+  </p>
+ </div>
+ 
+<%})%> -->
+
+
+  
+  
+ </div>
+<p style="font-size:30px;
+                text-align:center;"><span style="font-family: 'Nunito', sans-serif;"><span style="background-color:lightblue;
+                                                                                                  color:black;">ALL-STUDENTS </span></p>
+  
+
+
+
+
+
+<div style="overflow-x:auto;">
+ <table class="table table-bordered" id="table">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>PID</th>
+        <th>Roll Number</th>
+        <th>Mobile no</th>
+        <th>Profile</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%members.forEach(function(member){%>
+      <tr>
+        <td><%=member.StudentName%></td>
+        <td><%=member.username%></td>
+        <td><%=member.RollNumber%></td>
+        <td><%=member.MobileNumber%></td>
+        <td><a href="/profile/<%=member._id%>"><button style="margin-top:10px">Profile</button></a></td>
+        <td><form action="/deleteMember/<%=member._id%>" method="POST">
+           <button style="margin-top:10px;background-color:red;color:white">remove</button>
+          </form>
+        </td>
+        <%})%>
+      </tr>   
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
+
+
+
+
+
+
+  
+ <style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+  
+  
+  
+
+  
+<script>
+    if($(window).width() < 767){
+      $("p").css("font-size","11px")
+         $("h1").css("font-size","30px")
+         $("h3").css("font-size","20px")
+         $("#header").css("padding-bottom","20px")
+    }
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+  
+
+
+
+

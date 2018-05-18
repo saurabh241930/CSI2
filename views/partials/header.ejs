@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSI Website</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+
+
+  
+
+</head>
+<body style="max-width: 100%;
+    overflow-x: hidden;">
+  
+  
+ 
+
+  
+   <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#003399;font-family: 'Nunito', sans-serif;border-bottom:solid 1px #003399">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+      <a style="color:white"  class="navbar-brand" href="/">CSI</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/allEvents"><strong>All Events</strong></a></li>
+        <li><a href="/pastEvents"><strong>Past Events</strong></a></li>
+        <li><a href="/gallery"><strong>Gallery</strong></a></li>
+        <li><a href="/contact"><strong>Contact Us</strong></a></li>
+         
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%if(currentUser){%>
+           <%if(currentUser.username === "Admin"){%>
+        <li><a href="/AdminPortal"><strong>Admin Side</strong></a></li>
+        
+           <%}%>
+        <%}%>
+         <% if(!currentUser){%>
+                   <li><a class=" mr-2" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">Register</a></li>
+        
+             <% }else{ %>
+        <li><a class=" mr-2" href="/profile/<%=currentUser._id%>"><strong><%= currentUser.username%></strong></a></li>
+                  <li><a class=" mr-2" href="/logout" >Log Out</a></li>
+        
+              <% } %>
+      
+      </ul>
+     
+    </div> 
+  </div>
+</nav> 
+ 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+  
+  
+  
+  
+  
+  <div class="row">
+    
+   <div id="header" class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        style="background: linear-gradient(to right,#003399,black);padding-bottom:50px;">
+
+    <h1 id="title1" style="font-family: 'Playfair Display', serif;
+               text-align:center;
+               color:white;
+               margin-top:80px;
+               font-size:50px;
+               "><strong>Aldel Education Trust's</strong></h1>
+       <h3 id="title2" style="font-family: 'Playfair Display', serif;
+               text-align:center;
+               color:rgba(256,256,256,0.8);
+               font-size:35px;               
+               margin-top:0px;
+               "> St. John College of Engineering and Management</h3>
+     
+     <p id="title3" style="font-family: 'Playfair Display', serif;
+               font-size:15px;            
+               text-align:center;
+               color:rgba(256,256,256,0.5);
+               margin-top:0px;
+               "> Approved by AICTE, DTE and Affiliated to the University of Mumbai, MSBTE, NAAC Accredited with Grade "A"
+Department of Computer Engineering 
+Computer Society of INDIA</p>
+     
+    </div> 
+    
+    
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Register for CSI</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <form class = "ui form" action = '/register' method = "post">
+                <div style="margin-top:10px; font-size:20px">
+                   <label>Enter your PID</label>
+                   <input  style="margin-top:20px;
+                            text-align:center;" 
+                    class="form-control" type = 'text' name = 'username' placeholder = 'PID'>
+                </div>
+                <div style="margin-top:10px; font-size:20px">
+                      <label>Enter your Password</label>
+                       <input  style="margin-top:20px;
+                                text-align:center;" 
+                        class="form-control" type = 'password' name = 'password' placeholder = 'PID Password'>
+                </div>
+               <div style="margin-top:10px; font-size:20px">
+               <label>Enter your Name</label>
+               <input  style="margin-top:20px;
+                        text-align:center;" 
+                class="form-control" type = 'text' name = 'StudentName' placeholder = 'Full name'>
+               </div>
+      
+                <div style="margin-top:10px; font-size:20px">
+                 <label>Enter your Mobile no.</label>
+                 <input  style="margin-top:20px;
+                          text-align:center;" 
+                  class="form-control" type = 'number' name = 'MobileNumber' placeholder = 'MobileNumber'>
+                </div>
+      
+                <div>
+                 <label>Gender :</label>
+                     <select style="margin-top:20px;
+                                    text-align:center"
+                             name="Gender">
+
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+
+              </select>
+            </div>
+      
+      
+       <div>
+         <label>Branch :</label>
+             <select style="margin-top:20px;
+                            text-align:center"
+                     name="Class">
+
+            <option value="F.E - Computer Engineering">F.E - Computer Engineering</option>
+            <option value="F.E - IT Engineering">F.E - IT Engineering</option>
+            <option value="F.E - EXTC Engineering">F.E - EXTC Engineering</option>  
+            <option value="S.E - Computer Engineering">S.E - Computer Engineering</option>
+            <option value="S.E - IT Engineering">S.E - IT Engineering</option>
+            <option value="S.E - EXTC Engineering">S.E - EXTC Engineering</option>
+            <option value="T.E - Computer Engineering">T.E - Computer Engineering</option>
+            <option value="T.E - IT Engineering">T.E - IT Engineering</option>
+         </select>
+       </div>
+             
+       <div>
+         <input  style="margin-top:20px;
+                  text-align:center;" 
+          class="form-control" type = 'number' name = 'RollNumber' placeholder = 'Roll No.'>
+      </div>
+      
+ 
+         <button style="background-color:rgb(0, 51, 153);
+                          color:white;
+                          width:100%;
+                          border:solid 2px rgb(0, 51, 153);
+                          margin-top:20px;
+                          height:40px;
+                          font-size:20px"  >Sign Up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+<!--     
+    
+    <style>
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+    </style>
+     -->
+    
+    
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    
+       if($(window).width() < 767){
+      $("p").css("font-size","11px")
+         $("h1").css("font-size","30px")
+         $("h3").css("font-size","20px")
+         $("#header").css("padding-bottom","20px")
+    }
+   
+    
+    </script>
+   

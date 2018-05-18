@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSI Website</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+
+
+  
+
+</head>
+<body style="max-width: 100%;
+    overflow-x: hidden;">
+  
+  
+ 
+
+  
+   <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#003399;font-family: 'Nunito', sans-serif;border-bottom:solid 1px #003399">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+      <a style="color:white"  class="navbar-brand" href="/">CSI</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/allEvents"><strong>All Events</strong></a></li>
+        <li><a href="/pastEvents"><strong>Past Events</strong></a></li>
+        <li><a href="/gallery"><strong>Gallery</strong></a></li>
+        <li><a href="/contact"><strong>Contact Us</strong></a></li>
+         
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%if(currentUser){%>
+           <%if(currentUser.username === "Admin"){%>
+        <li><a href="/AdminPortal"><strong>Admin Side</strong></a></li>
+        
+           <%}%>
+        <%}%>
+         <% if(!currentUser){%>
+                   <li><a class=" mr-2" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">Register</a></li>
+        
+             <% }else{ %>
+        <li><a class=" mr-2" href="/profile/<%=currentUser._id%>"><strong><%= currentUser.username%></strong></a></li>
+                  <li><a class=" mr-2" href="/logout" >Log Out</a></li>
+        
+              <% } %>
+      
+      </ul>
+     
+    </div> 
+  </div>
+</nav> 
+ 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+  
+  
+  
+  
+ 
+
+
+  
+  <div class="row">
+  
+    <div  class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      
+      
+      
+     <p class="p" style="text-align:center;margin-top:70px"><span style="background-color:black;font-family: 'Nunito', sans-serif;
+      font-size:12px;
+      color:white;padding:10px">CONTACT CSI STUDENT BRANCH CO-ORDINATOR :</span></p> 
+      
+      <p style="text-align:center;margin-top:20px"><span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px">Siddesh Bhagat</span>
+      
+      
+      <br> <i class="fa fa-envelope"></i> siddheshb@sjcet.co.in<span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px"></span></p>
+    <p style="text-align:center;margin-top:40px"><span style="background-color:black;font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      color:white;padding:10px">CONTACT DEVELOPERS :</span></p>
+      
+       <p style="text-align:center;margin-top:20px"><span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px">Saurabh Pandey</span></p>
+      
+       <p style="text-align:center;margin-top:10px"><i class="fa fa-phone"></i> 8097448698<span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px"></span>
+      
+      
+        <i class="fa fa-envelope"></i> sp241930@gmail.com<span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px"></span></p>
+      
+        <p style="text-align:center;margin-top:20px"><span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px">Chirag Prajapati</span></p>
+      
+       <p style="text-align:center;margin-top:10px"><i class="fa fa-phone"></i> 7738189663<span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px"></span>
+      
+      
+       <i class="fa fa-envelope"></i> chiragprajapati781@gmail.com<span style="font-family: 'Nunito', sans-serif;
+      font-size:18px;
+      padding:10px"></span></p>
+      
+      
+      
+      </div>
+      
+  </div>
+
+
+<div class="container"> 
+  <div class="wrapper" style="text-align:center; "> <button class="button " id="show" style="border:2px solid #003399;
+                                                                                              border-radius:5px">SJCEM CSI Members</button></div>
+ 
+  <table class="table table-bordered" id="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Parth Jagdish Zalavadia</td>
+        <td>Chair Person</td>
+        
+        
+      </tr>
+      <tr>
+        
+      <td>Vrutti Veniram Patel</td>
+         <td>Co-Chair Person</td>
+       
+      </tr>
+      
+      <tr>
+       <td>Aayush Sanjay Soni</td>
+        <td>Membership Head</td>
+        
+      </tr>
+      <tr>
+       <td>Pratim Bikash Hajra</td>
+        <td>Membership Head</td>
+        
+      </tr>
+      <tr>
+      <td>Pooja Jaydas Upade</td>
+        <td>Conference Head</td>
+       
+      </tr>
+      <tr>
+      
+       <td>Mihir Prashant Kulkarni</td>
+         <td>Conference Head</td>
+       
+      </tr>
+      <tr>
+       <td>Bhakti Pandurang Patil</td>
+        <td>Secretary</td>
+        
+      </tr>
+      <tr>
+      <td>Pranita Ganesh Raut</td>
+        <td>Finance Head</td>
+       
+      </tr>
+      <tr>
+      <td>Hardik Suresh Patel</td>
+        <td>Finance Head</td>
+       
+      </tr>
+      <tr>
+       <td>Shaili Minesh Patil</td>
+        <td>Training And Placement</td>
+       
+      </tr>
+      
+      <tr>
+       <td>Smit Pratap Jethva</td>
+        <td>Technical Head</td>
+       
+      </tr>
+      <tr>  
+       <td>Sandesh Pralhad Rathod</td>
+         <td>Event Head</td>
+       
+      </tr>
+      <tr>
+         <td>Pranav Prashant Gharat</td>
+        <td>Event Head</td>
+       
+      </tr>
+     
+    </tbody>
+  </table>
+  </div>
+  
+</body>
+
+
+<style>
+
+
+
+</style>
+
+
+<script>
+    $("#table").hide()
+ 
+    $(document).ready(function(){
+   
+    $("button").click(function(){
+        $("#table").toggle();
+    });
+});
+  
+      if($(window).width() < 767){
+      $('col').css("margin-top","25px")
+    }
+  
+</script>
+
+
