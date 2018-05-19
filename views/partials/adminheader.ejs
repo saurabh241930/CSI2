@@ -56,7 +56,7 @@
            <%}%>
         <%}%>
          <% if(!currentUser){%>
-                <li><a class=" mr-2" href="/register"><strong>Register</strong></a></li>
+                   <li><a class=" mr-2" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">Register</a></li>
              <% }else{ %>
         <li><a class=" mr-2" href="/profile/<%=currentUser._id%>"><strong><%= currentUser.username%></strong></a></li>
                   <li><a class=" mr-2" href="/logout" >Log Out</a></li>
