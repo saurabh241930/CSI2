@@ -41,26 +41,27 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="/allEvents"><strong>All Events</strong></a></li>
-        <li><a href="/pastEvents"><strong>Past Events</strong></a></li>
-        <li><a href="/gallery"><strong>Gallery</strong></a></li>
-        <li><a href="/contact"><strong>Contact Us</strong></a></li>
+        <li><a href="/allEvents"><strong style="background-color:#ccc;padding:5px;color:#003994">All Events</strong></a></li>
+        <li><a href="/pastEvents"><strong style="background-color:#ccc;padding:5px;color:#003994">Past Events</strong></a></li>
+        <li><a href="/gallery"><strong style="background-color:#ccc;padding:5px;color:#003994">Gallery</strong></a></li>
+        <li><a href="/contact"><strong style="background-color:#ccc;padding:5px;color:#003994">Contact Us</strong></a></li>
          
         </ul>
          <ul class="nav navbar-nav navbar-right ">
            <%if(currentUser){%>
            <%if(currentUser.username === "Admin"){%>
-        <li><a href="/AdminPortal"><strong>Admin Side</strong></a></li>
-        <li><a href="/AddEvent"><strong>Add Events</strong></a></li>
-        <li><a href="/uploadImage"><strong>Add Image</strong></a></li>
-            <li><a class=" mr-2" href="/logout" >Log Out</a></li>
+        <li><a href="/AdminPortal"><strong style="background-color:#ccc;padding:5px;color:#003994">Admin Side</strong></a></li>
+        <li><a href="/AddEvent"><strong style="background-color:#ccc;padding:5px;color:#003994">Add Events</strong></a></li>
+        <li><a href="/uploadImage"><strong style="background-color:#ccc;padding:5px;color:#003994">Add Image</strong></a></li>
+            
            <%}%>
         <%}%>
          <% if(!currentUser){%>
                    <li><a class=" mr-2" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">Register</a></li>
              <% }else{ %>
-        <li><a class=" mr-2" href="/profile/<%=currentUser._id%>"><strong><%= currentUser.username%></strong></a></li>
-                  <li><a class=" mr-2" href="/logout" >Log Out</a></li>
+        <li><a class=" mr-2" href="/profile/<%=currentUser._id%>"><strong style="background-color:#ccc;padding:5px;color:#003994"><%= currentUser.username%></strong></a></li>
+                  <li><a class=" mr-2" type="button" href="/logout">
+                     <span style="background-color:white;padding:5px;color:black">Log Out</span></a></li>
         
               <% } %>
            

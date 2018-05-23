@@ -24,6 +24,8 @@ router.get('/',function(req,res){
       console.log(err);
     } else {
       
+     events  = events.reverse()
+      
       res.render('index',{events:events,images:images});
         }
   })
